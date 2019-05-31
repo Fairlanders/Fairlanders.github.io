@@ -14,13 +14,13 @@
     /* Likely future */
 }
 
-@media only screen and (max-width: 1200px) {
-  * {
+@media only screen and (max-width: 1800px) {
+  body {
     display: none;
   }
-  body{
+  #placeholder-responsive{
     display: block;
-    background-image: url(https://www.google.com/search?q=poop&source=lnms&tbm=isch&sa=X&ved=0ahUKEwizudnor8biAhWS0KYKHWw4C4AQ_AUIDigB&biw=1920&bih=937#imgrc=92q_dftL8lhADM:);
+    background-image: url(poop.png);
   }
 } 
 
