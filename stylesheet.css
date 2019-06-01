@@ -20,6 +20,9 @@ body {
   height: 100%;
     overflow-x: hidden;
     font-family: 'Work Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -43,13 +46,13 @@ nav .wrap ul{
   display: flex;
   justify-content: space-evenly;
   margin: 0;
-  width: 100%;
 }
 
 /* FIRST PAGE CSS */
 
 #first-page {
-    width: 100%;
+  overflow: hidden;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -334,7 +337,7 @@ nav .wrap ul{
 #second-page {
     position: relative;
     text-align: center;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     background: #bdc3c7;
     position: relative;
@@ -379,7 +382,7 @@ nav .wrap ul{
 /* SUB PAGE CSS */
 
 #sub-page{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: url('sub-page-1.jpg') no-repeat center center;
     background-attachment: fixed;
@@ -391,7 +394,7 @@ nav .wrap ul{
 
 #third-page{
     position: relative;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     background: #504b4b;
 }
@@ -500,7 +503,7 @@ text-align: center;
 /* SUB PAGE CSS */
 
 #second-sub-page{
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     background: url('keyboard.jpg') no-repeat center center;
     background-attachment: fixed;
@@ -511,7 +514,7 @@ text-align: center;
 
 #forth-page{
   position: relative;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     background: #222130;
 }
@@ -754,7 +757,7 @@ text-align: center;
 /* SUB PAGE CSS */
 
 #third-sub-page{
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     background: url('code.jpg') no-repeat center center;
     background-attachment: fixed;
@@ -764,7 +767,7 @@ text-align: center;
 /* FIFTH PAGE CSS */
 
 #fifth-page{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: #000000;
 }
