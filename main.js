@@ -47,8 +47,8 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         if (scroll > 30) {
-            $("nav").css({ "background": "#fff", "box-shadow": "0px 2px 8px 0px rgba(50, 50, 50, 0.08)" });
-            $('nav i').css('color', '#504b4b');
+            $("nav").css({ "background": "#808080", "box-shadow": "0px 2px 8px 0px rgba(50, 50, 50, 0.08)" });
+            $('nav i').css('color', '#fff');
         }
         else {
             $("nav").css({ "background": "transparent", "box-shadow": "none" });
