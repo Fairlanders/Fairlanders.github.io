@@ -14,18 +14,10 @@
     /* Likely future */
 }
 
-@media only screen and (max-width: 1800px) {
-  body {
-    display: none;
-  }
-  #placeholder-responsive{
-    display: block;
-    background-image: url(poop.png);
-  }
-} 
 
 body {
     overflow-x: hidden;
+    font-family: 'Work Sans', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -37,18 +29,45 @@ body {
     border-radius: 4px;
     background-color: rgba(0,0,0,.5);
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-}   
+} 
+
+
+nav{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+nav .wrap{
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 14px 0;
+}
+
+nav .wrap ul{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  width: 100%;
+}
+
 /* FIRST PAGE CSS */
 
 #first-page {
     width: 100%;
     height: 100vh;
-    background: #010001;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-image: url(body-background.jpg);
+    background: url('body-background.jpg') no-repeat center center;
     background-attachment: fixed;
+    background-size: cover;
+}
+
+#first-page .button-chevron{
+  text-align: center;
 }
 
 #name{
@@ -65,22 +84,23 @@ body {
 }
 
 .chevron{
-    display: flex;
-    justify-content: center;
+   text-align: center;
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
 }
 
 .chevron > i{
-    font-size: 5em;
+  font-size: 5em;
     color: #ddd;
     cursor: pointer;
 }
 
 .menu-li{
-    display: inline-block;
-    color: #ddd;
-    padding: 20px;
-    margin-right: 40px;
+    color: #ddd;  
     cursor: pointer;
+    margin: 0 25px;
 }
 
 .menu-li > i{
@@ -90,25 +110,6 @@ body {
 .menu-li:hover{
     color: rgb(184, 184, 184)
 }
-
-
-#navbar > ul{
-    display: flex;
-    justify-content: space-between;
-}
-
-.right-menu{
-    width: 100%;
-    min-height: 80px;
-    display: flex;
-    justify-content: center;
-}
-
-.inner-div{
-    position: fixed;
-}
-
-
 
 @keyframes tiktok
 {
@@ -151,15 +152,8 @@ body {
         font-size: 2em;
     }
   }
-
-  body {
-    font-family: 'Work Sans', sans-serif;
-    background: #111;
-    text-align: center;
-  }
   
   .button {
-      width: 10vw;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -171,8 +165,7 @@ body {
     overflow: hidden;
     opacity: 1;
     color: #FFF;
-    margin-left: 45%;
-    margin-bottom: 2.5%;
+    margin: 140px 0;
   }
   .button__text {
     display: block;
@@ -346,10 +339,12 @@ body {
 /* SECOND PAGE CSS */
 
 #second-page {
+    position: relative;
+    text-align: center;
     width: 100%;
-    height: 100vh;
-    display: flexbox;
+    min-height: 100vh;
     background: #bdc3c7;
+    position: relative;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #202020, #010001);
     /* Chrome 10-25, Safari 5.1-6 */
@@ -360,10 +355,11 @@ body {
 
 .card-about-me{
     display: inline-block;
-    width: 600px;
-    height: 600px;
-    margin: 7%;
-    overflow: hidden;
+    min-width: 400px;
+    min-height: 600px;
+    max-width: 600px;
+    max-height: 800px;
+    
 }
 
 .card-about-me > ul{
@@ -373,6 +369,7 @@ body {
 .card-about-me > h1{
     font-family: 'Indie Flower', cursive;
     font-size: 4em;
+    margin-top: 120px;
 }
 
 .card-about-me > h1,ul{
@@ -391,16 +388,18 @@ body {
 #sub-page{
     width: 100%;
     height: 100vh;
-    background-image: url(sub-page-1.jpg);
+    background: url('sub-page-1.jpg') no-repeat center center;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 
 /* THIRD PAGE CSS */
 
 #third-page{
+    position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: #504b4b;
 }
 
@@ -417,14 +416,18 @@ h1{
     letter-spacing: 0.1em;
 }
 
-.content-portfolio{
+#third-page .content-portfolio{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .flip-card {
-    background-color: transparent;
-    width: 300px;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
     height: 400px;
     perspective: 600px;
     margin-top: 50px;
@@ -437,7 +440,7 @@ h1{
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background: #bbb;
   }
   
   .flip-card:hover .flip-card-inner {
@@ -452,14 +455,26 @@ h1{
   }
 
   .flip-card-front {
-    background-color: #bbb;
     color: black;
+    height: 300px;
+  }
+
+  .flip-card-front img{
+    width: 100%;
+    height: 100%;
   }
   
   .flip-card-back {
     background-color: #202020;
     color: white;
     transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flip-card-back p{
+    padding: 10px;
   }
 
 .flip-card-front>span{
@@ -473,31 +488,43 @@ h1{
 
 .second-page-div{
   height: 91%;
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.content-portfolio{
-  height: 70vh;
+#third-page{
+  padding: 160px 0 0 0;
+text-align: center;
 }
+
+#third-page h1{
+  margin: 0 0 20px 0;
+}
+
 
 /* SUB PAGE CSS */
 
 #second-sub-page{
     width: 100%;
-    height: 100vh;
-    background-image: url(sub-page-2.jpg);
+    min-height: 100vh;
+    background: url('keyboard.jpg') no-repeat center center;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 /* FORTH PAGE CSS */
 
 #forth-page{
+  position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: #222130;
 }
 
 .inner-forth-page{
-  height: 91vh;
+  min-height: 91vh;
   width: 100%;
   text-align: center;
 }
@@ -515,7 +542,7 @@ h1{
 
 .btn-cont {
   text-align: center;
-  margin-top: 200px;
+  
 }
 .btn-cont .btn {
   position: relative;
@@ -735,9 +762,10 @@ h1{
 
 #third-sub-page{
     width: 100%;
-    height: 100vh;
-    background-image: url(sub-page-3.jpg);
+    min-height: 100vh;
+    background: url('code.jpg') no-repeat center center;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 /* FIFTH PAGE CSS */
@@ -755,14 +783,12 @@ h1{
 }
 
 .title-fifth-page > h1{
-  display: inline-block;
   color: #ddd;
   font-size: 4em;
   margin-top: 120px;
 }
 
 .title-fifth-page > p{
-  display: inline-block;
   color: #ddd;
   font-size: 1.5em;
   margin-top: 60px;
@@ -779,7 +805,7 @@ h1{
 .title-fifth-page{
   display: inline-block;
   width: 100%;
-  height: 65vh;
+  min-height: 65vh;
 }
 
 .copyright-designed-by{
@@ -804,7 +830,8 @@ h1{
 }
 
 .social-buttons{
-  width: 50%;
+  min-width: 375px;
+  max-width: 1600px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -889,4 +916,64 @@ h1{
 
 li{
   list-style-type: none;
+}
+
+/* RESPONSIVE CSS */
+
+@media only screen and (max-width: 950px) {
+  .flip-card{
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+  .portfolio{
+    font-size: 2em;
+    margin-bottom: 120px;
+  }
+  #return-to-top{
+    display: none !important;
+  }
+}
+
+@media(max-width: 1200px){
+  #forth-page .inner-forth-page p{
+    padding: 0 20px;
+  }
+  #second-page{
+    min-height: 150vh;
+  }
+}
+
+
+@media(max-width: 800px){
+  #third-page .content-portfolio{
+    flex-direction: column;
+    align-items: center;
+  }
+  #third-page .content-portfolio .flip-card{
+    margin: 40px 0;
+    max-width: 70%;
+  }
+}
+
+@media(min-width: 801px) and (max-width: 1100px){
+  #third-page .content-portfolio{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  #third-page .content-portfolio .flip-card{
+    margin: 40px 0;
+    max-width: 42%;
+  }
+}
+
+@media(max-width: 1300px){
+  #third-page .content-portfolio{
+    max-width: 90%;
+  }
+  #fifth-page .title-fifth-page p{
+    padding: 0 20px;
+  }
+  #third-page .content-portfolio .flip-card:last-child{
+    margin-bottom: 100px;
+  }
 }
