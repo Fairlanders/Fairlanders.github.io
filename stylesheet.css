@@ -16,6 +16,7 @@
 
 
 body {
+  overflow-x: hidden;
     width: 100%;
     height: 100%;
     font-family: 'Work Sans', sans-serif;
@@ -353,6 +354,7 @@ body {
     margin-bottom: 20px;
     font-family: 'Inconsolata', monospace;
     font-size: 1.5em;
+    padding: 0 30px;
 }
 
 /* SUB PAGE CSS */
@@ -491,12 +493,13 @@ text-align: center;
 #forth-page{
   position: relative;
     width: 100vw;
-    min-height: 100vh;
+    min-height: 600px;
+    height: 100vh;
     background: #222130;
+    overflow: hidden;
 }
 
 .inner-forth-page{
-  min-height: 91vh;
   width: 100%;
   text-align: center;
 }
@@ -512,207 +515,6 @@ text-align: center;
   margin-top: 120px;
 }
 
-.btn-cont {
-  text-align: center;
-  
-}
-.btn-cont .btn {
-  position: relative;
-  padding: 20px 70px;
-  border: 1px solid white;
-  color: white;
-  text-decoration: none;
-  font-size: 1.125em;
-  font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  -webkit-font-smoothing: antialiased;
-}
-.btn-cont .btn:hover {
-  border: none;
-}
-.btn-cont .btn:hover .line-1 {
-  -webkit-animation: move1 1500ms infinite ease;
-          animation: move1 1500ms infinite ease;
-}
-.btn-cont .btn:hover .line-2 {
-  -webkit-animation: move2 1500ms infinite ease;
-          animation: move2 1500ms infinite ease;
-}
-.btn-cont .btn:hover .line-3 {
-  -webkit-animation: move3 1500ms infinite ease;
-          animation: move3 1500ms infinite ease;
-}
-.btn-cont .btn:hover .line-4 {
-  -webkit-animation: move4 1500ms infinite ease;
-          animation: move4 1500ms infinite ease;
-}
-.btn-cont .line-1 {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 1px;
-  background-color: white;
-  left: 0;
-  bottom: 0;
-}
-.btn-cont .line-2 {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 1px;
-  background-color: white;
-  left: 0;
-  top: 0;
-}
-.btn-cont .line-3 {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 1px;
-  background-color: white;
-  right: 0;
-  top: 0;
-}
-.btn-cont .line-4 {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 1px;
-  background-color: white;
-  right: 0;
-  bottom: 0;
-}
-
-@-webkit-keyframes move1 {
-  0% {
-    height: 100%;
-    bottom: 0;
-  }
-  54% {
-    height: 0;
-    bottom: 100%;
-  }
-  55% {
-    height: 0;
-    bottom: 0;
-  }
-  100% {
-    height: 100%;
-    bottom: 0;
-  }
-}
-
-@keyframes move1 {
-  0% {
-    height: 100%;
-    bottom: 0;
-  }
-  54% {
-    height: 0;
-    bottom: 100%;
-  }
-  55% {
-    height: 0;
-    bottom: 0;
-  }
-  100% {
-    height: 100%;
-    bottom: 0;
-  }
-}
-@-webkit-keyframes move2 {
-  0% {
-    width: 0;
-    left: 0;
-  }
-  50% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-@keyframes move2 {
-  0% {
-    width: 0;
-    left: 0;
-  }
-  50% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-@-webkit-keyframes move3 {
-  0% {
-    height: 100%;
-    top: 0;
-  }
-  54% {
-    height: 0;
-    top: 100%;
-  }
-  55% {
-    height: 0;
-    top: 0;
-  }
-  100% {
-    height: 100%;
-    top: 0;
-  }
-}
-@keyframes move3 {
-  0% {
-    height: 100%;
-    top: 0;
-  }
-  54% {
-    height: 0;
-    top: 100%;
-  }
-  55% {
-    height: 0;
-    top: 0;
-  }
-  100% {
-    height: 100%;
-    top: 0;
-  }
-}
-@-webkit-keyframes move4 {
-  0% {
-    width: 0;
-    right: 0;
-  }
-  55% {
-    width: 100%;
-    right: 0;
-  }
-  100% {
-    width: 0;
-    right: 100%;
-  }
-}
-@keyframes move4 {
-  0% {
-    width: 0;
-    right: 0;
-  }
-  55% {
-    width: 100%;
-    right: 0;
-  }
-  100% {
-    width: 0;
-    right: 100%;
-  }
-}
 
 
 .inner-forth-page > h1{
@@ -726,7 +528,6 @@ text-align: center;
   font-size: 20px;
   font-weight: 400px;
   color: #bbb;
-  margin-bottom: 200px;
 }
 
 
@@ -746,6 +547,7 @@ text-align: center;
     width: 100vw;
     height: 100vh;
     background: #000000;
+    overflow-x: hidden;
 }
 
 .inner-fifth-page{
@@ -929,8 +731,11 @@ li{
     font-size: 1.35em;
   }
   .btn-cont{
-    padding-bottom: 160px;
+    padding-bottom: 260px;
   }
+  .inner-copyright-designed-by span{
+    font-size: 16px;
+}
 }
 
 @media(min-width: 801px) and (max-width: 1100px){
