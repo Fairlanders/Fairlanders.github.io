@@ -559,6 +559,69 @@ text-align: center;
   color: #bbb;
 }
 
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+}
+
+.btn {
+  color: white;
+  border: 1px solid #aaaaaa;
+  padding: 20px 80px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn span {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  z-index: 100;
+  font-weight: 900;
+}
+.btn:before, .btn:after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.btn:before {
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  background-color: #fff;
+  border: 1px solid #fff;
+  transition: -webkit-transform 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.btn:after {
+  background-color: #aaaaaa;
+  border: 1px solid #aaaaaa;
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+  transition: -webkit-transform 300ms 300ms cubic-bezier(0.16, 0.73, 0.58, 0.62);
+  transition: transform 300ms 300ms cubic-bezier(0.16, 0.73, 0.58, 0.62);
+  transition: transform 300ms 300ms cubic-bezier(0.16, 0.73, 0.58, 0.62), -webkit-transform 300ms 300ms cubic-bezier(0.16, 0.73, 0.58, 0.62);
+}
+.btn:hover:before {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.btn:hover:after {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
 
 /* SUB PAGE CSS */
 
@@ -767,7 +830,7 @@ li{
     padding-bottom: 260px;
   }
   .inner-copyright-designed-by span{
-    font-size: 16px;
+    font-size: 12px;
   }
   #sub-page{
     width: 100%;
