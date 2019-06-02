@@ -520,12 +520,18 @@ text-align: center;
 /* FORTH PAGE CSS */
 
 #forth-page{
-  position: relative;
     width: 100%;
     min-height: 600px;
     height: 100vh;
     background: #222130;
     overflow: hidden;
+}
+
+.forth-page-chevron{
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  position: relative;
 }
 
 .inner-forth-page{
@@ -613,6 +619,7 @@ button:hover{
   width: 100%;
   height: 80vh;
   text-align: center;
+  position: relative;
 }
 
 .title-fifth-page > h1{
@@ -780,6 +787,9 @@ li{
   .social{
     justify-content: space-around;
   }
+  .social a{
+    padding: 0;
+  }
   #github{
     border: 4px solid #ddd;
     display: inline-block;
@@ -816,6 +826,12 @@ li{
   }
 }
 
+@media(min-width:380){
+  #github{
+    padding-left: 8%;
+  }
+}
+
 @media(min-width: 801px) and (max-width: 1100px){
   #third-page .content-portfolio{
     flex-wrap: wrap;
@@ -840,4 +856,12 @@ li{
   .card-about-me:last-child{
     padding-bottom: 160px;
   }
+}
+
+/* MOBILE LOOK */
+
+@media(max-width:800px){
+    body{
+      overflow: hidden;
+    }
 }
