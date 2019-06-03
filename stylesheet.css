@@ -37,7 +37,6 @@ nav{
   max-width: 500px;
   margin: 0 auto;
   padding: 14px 0;
-  transform: translateX(-3%);
 }
 
 nav .wrap ul{
@@ -801,9 +800,6 @@ li{
     margin: 40px 0;
     max-width: 70%;
   }
-  .menu-li i{
-    font-size: 1.35em;
-  }
   .btn-cont{
     padding-bottom: 260px;
   }
@@ -888,7 +884,7 @@ li{
     padding: 20px 0;
   }
   .xd p{
-    padding: 20px;
+    padding: 10 5 5 5px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   .xd form{
