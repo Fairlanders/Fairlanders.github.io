@@ -70,6 +70,11 @@ nav ul li{
   text-align: center;
 }
 
+h1{
+  color: #FFCB01 !important;
+  font-weight: bold;
+}
+
 #name{
     display: inline-block;
     margin:auto;
