@@ -29,7 +29,7 @@ nav{
   position: fixed;
   top: 0;
   z-index: 99;
-  width: 100%;
+  width: 101%;
 }
 
 .wrap{
@@ -37,6 +37,7 @@ nav{
   max-width: 500px;
   margin: 0 auto;
   padding: 14px 0;
+  transform: translateX(-3%);
 }
 
 nav .wrap ul{
@@ -525,17 +526,14 @@ text-align: center;
     height: 100vh;
     background: #222130;
     overflow: hidden;
+    position: relative;
 }
 
-.forth-page-chevron{
-  display: flex;
-  flex-direction: column;
-  height: 300px;
+.forth{
   position: relative;
 }
 
 .inner-forth-page{
-  width: 100%;
   text-align: center;
 }
 
@@ -858,10 +856,52 @@ li{
   }
 }
 
+.xd{
+  display: none;
+}
+
 /* MOBILE LOOK */
 
-@media(max-width:800px){
-    body{
-      overflow: hidden;
-    }
+@media(max-width:600px){
+  .mobile{
+    display: none;
+  }
 }
+
+@media(max-width:599px){
+  html, body {
+    overflow: hidden;
+  }
+  body {
+    position: relative;
+  }
+  .xd{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background: #c9c9c9;
+  }
+  .xd .mobile-header{
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    padding: 20px 0;
+  }
+  .xd p{
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .xd form{
+    margin: 0;
+    padding: 0;
+  }
+  .xd button{
+    padding: 10 5px;
+    margin: 0;
+    border: 2px solid #222130;
+  }
+  .xd form button span{
+    color: #222130
+  }
+}
+
